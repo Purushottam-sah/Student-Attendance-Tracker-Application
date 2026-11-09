@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarReport"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:title="Attendance Reports"
+        app:titleTextColor="@color/primary_blue"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        android:elevation="4dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Time Period Filters matching Screen 6 -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleReportPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:checkedButton="@+id/btnMonthly">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDaily"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Daily"
+                    android:textSize="11sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnWeekly"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weekly"
+                    android:textSize="11sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMonthly"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Monthly"
+                    android:textSize="11sp" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCustom"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Custom"
+                    android:textSize="11sp" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- Summary Card matching Screen 6 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    android:weightSum="3">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Classes" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/txtTotalClasses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Conducted" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/txtConductedClasses" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Avg Attendance" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+                        <TextView android:id="@+id/txtAvgAttendance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/present_green"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Status Distribution Chart -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance Summary"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke"
+                android:layout_marginBottom="32dp">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChartOverall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Subject wise progress -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Subject-wise Performance"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:id="@+id/subjectListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <View android:layout_width="match_parent" android:layout_height="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

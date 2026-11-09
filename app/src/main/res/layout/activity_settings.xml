@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_blue_bg">
+
+    <!-- Premium Settings Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary"
+            android:contentDescription="Back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="System Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Section: Account -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACCOUNT &amp; PROFILE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                android:letterSpacing="0.1"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnProfileSettings" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" android:layout_marginHorizontal="16dp"/>
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnChangePassword" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Preferences -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="APP PREFERENCES"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Dark Mode with Switch -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:paddingHorizontal="16dp">
+                        <ImageView
+                            android:id="@+id/iconDark"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerVertical="true"
+                            android:src="@android:drawable/ic_menu_day"
+                            app:tint="@color/primary_blue"
+                            android:contentDescription="Dark Mode" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/iconDark"
+                            android:layout_marginStart="16dp"
+                            android:text="Dark Theme"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_primary" />
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/darkSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" android:layout_marginHorizontal="16dp"/>
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnNotiSettings" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section: Legal -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LEGAL &amp; SUPPORT"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_blue"
+                android:letterSpacing="0.1"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnPrivacy" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" android:layout_marginHorizontal="16dp"/>
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnTerms" />
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" android:layout_marginHorizontal="16dp"/>
+                    <include layout="@layout/item_settings_row" android:id="@+id/btnAbout" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logoutBtn"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="48dp"
+                android:text="SECURE LOGOUT"
+                android:textStyle="bold"
+                android:textColor="@color/absent_red"
+                app:cornerRadius="16dp"
+                app:strokeColor="@color/absent_red"
+                app:strokeWidth="1dp" />
+
+            <View android:layout_width="match_parent" android:layout_height="100dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

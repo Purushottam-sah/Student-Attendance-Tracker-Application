@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Blue Background Shield -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,15L25,30v35c0,21.5 15,41 35,46c20,-5 35,-24.5 35,-46V30L60,15z" />
+    <!-- Cutout Graduation Cap -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M60,35l-20,10l20,10l20,-10L60,35z M80,48v12l-20,10l-20,-10v-12l20,10L80,48z" />
+</vector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep Slate/Dark Blue OLED Palette -->
+    <color name="primary_blue">#90CAF9</color> <!-- Lighter blue for dark mode -->
+    <color name="dark_blue">#1976D2</color>
+
+    <color name="background">#121212</color> <!-- OLED Black -->
+    <color name="white">#1E1E1E</color> <!-- Surface gray for cards -->
+    <color name="black">#E0E0E0</color> <!-- Off-white for text -->
+
+    <color name="green">#81C784</color>
+    <color name="yellow">#FFD54F</color>
+    <color name="red">#E57373</color>
+</resources>

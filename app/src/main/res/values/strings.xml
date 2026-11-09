@@ -1,0 +1,19 @@
+<resources>
+
+<string name="app_name">
+Smart Student Attendance Tracker
+</string>
+
+<string name="welcome">
+Welcome Back!
+</string>
+
+<string name="login">
+Login
+</string>
+
+<string name="signup">
+Sign Up
+</string>
+
+</resources>

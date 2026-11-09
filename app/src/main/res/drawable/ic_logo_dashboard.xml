@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Brand Blue Shield Icon for Dashboards -->
+    <path
+        android:fillColor="@color/primary_blue"
+        android:pathData="M60,10L20,25v40c0,24 18,43 40,48c22,-5 40,-24 40,-48V25L60,10z M60,65.6h25.4c-1.8,15.8 -10.3,28.8 -25.4,32.7V65.6H34.6V44.9L60,27.5v38.1z" />
+</vector>

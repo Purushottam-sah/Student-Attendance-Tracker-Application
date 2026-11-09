@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">28dp</dimen>
+    <dimen name="input_corner_radius">28dp</dimen>
+    <dimen name="header_height">200dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
+</resources>

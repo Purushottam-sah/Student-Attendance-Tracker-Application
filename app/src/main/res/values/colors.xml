@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Premium Royal Indigo & Arctic Palette -->
+    <color name="primary_blue">#3F51B5</color>
+    <color name="dark_blue">#303F9F</color>
+    <color name="vibrant_blue">#5C6BC0</color>
+    <color name="light_blue_bg">#F4F6F9</color>
+    <color name="soft_blue">#E8EAF6</color>
+
+    <!-- Sophisticated Accents -->
+    <color name="present_green">#00E676</color>
+    <color name="absent_red">#FF1744</color>
+    <color name="leave_orange">#FF9100</color>
+    <color name="today_blue">#2979FF</color>
+
+    <!-- Premium Pastel Backgrounds -->
+    <color name="bg_blue_soft">#E8EAF6</color>
+    <color name="bg_green_soft">#E8F5E9</color>
+    <color name="bg_red_soft">#FFEBEE</color>
+    <color name="bg_yellow_soft">#FFF3E0</color>
+
+    <!-- Neutral Surfaces -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#121212</color>
+    <color name="surface_gray">#F1F3F4</color>
+    <color name="card_stroke">#E0E0E0</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1A237E</color>
+    <color name="text_secondary">#5C6BC0</color>
+    <color name="text_tertiary">#7986CB</color>
+
+    <!-- Compatibility -->
+    <color name="green">#00E676</color>
+    <color name="red">#FF1744</color>
+    <color name="yellow">#FF9100</color>
+    <color name="background">#F4F6F9</color>
+    <color name="leave_color">#FF9100</color>
+</resources>

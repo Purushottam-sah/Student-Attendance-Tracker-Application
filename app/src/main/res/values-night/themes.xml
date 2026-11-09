@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SmartStudentAttendanceTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="Theme.SmartStudentAttendanceTracker.NoActionBar" parent="Theme.SmartStudentAttendanceTracker" />
+
+</resources>

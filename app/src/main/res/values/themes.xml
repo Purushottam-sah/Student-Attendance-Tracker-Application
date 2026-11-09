@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SmartStudentAttendanceTracker"
+        parent="Theme.Material3.Light.NoActionBar">
+
+        <item name="android:fontFamily">sans</item>
+
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorSecondary">@color/vibrant_blue</item>
+        <item name="android:windowBackground">@color/light_blue_bg</item>
+
+        <!-- Status & Nav Bar -->
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+
+        <!-- Rounded Corners for Material Components -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.LargeComponent</item>
+
+        <!-- Bottom Navigation Customization -->
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/App.ActiveIndicator</item>
+    </style>
+
+    <style name="App.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/soft_blue</item>
+        <item name="android:width">44dp</item>
+        <item name="android:height">32dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="AppCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">28dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+    </style>
+
+<style name="Theme.SmartStudentAttendanceTracker.NoActionBar" parent="Theme.SmartStudentAttendanceTracker" />
+
+</resources>

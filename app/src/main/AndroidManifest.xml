@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:name=".TrackerApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Smart Student Attendance Tracker"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartStudentAttendanceTracker">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SmartStudentAttendanceTracker.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.OnboardingActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.SignupActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.EditProfileActivity" />
+        <activity android:name=".activities.PrivacyActivity" />
+        <activity android:name=".activities.TermsActivity" />
+        <activity android:name=".activities.AddSubjectActivity" />
+        <activity android:name=".activities.AttendanceActivity" />
+        <activity android:name=".activities.AttendanceHistoryActivity" />
+        <activity android:name=".activities.AttendanceCalculatorActivity" />
+        <activity android:name=".activities.AddNoteActivity" />
+        <activity android:name=".activities.SettingsActivity" />
+        <activity android:name=".activities.NotificationListActivity" />
+        <activity android:name=".activities.ChangePasswordActivity" />
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.TimetableActivity" />
+        <activity android:name=".activities.AddTimetableActivity" />
+        <activity android:name=".activities.NoticeActivity" />
+        <activity android:name=".activities.AddNoticeActivity" />
+        <activity android:name=".activities.ReportActivity" />
+        <activity android:name=".activities.AnalyticsActivity" />
+        <activity android:name=".activities.StudentManagementActivity" />
+        <activity android:name=".activities.AddStudentActivity" />
+        <activity android:name=".activities.AdminDashboardActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.AdminStudentSubjectsActivity" />
+        <activity android:name=".activities.AdminAttendanceActivity" />
+        <activity android:name=".activities.LowAttendanceAlertActivity" />
+        <activity android:name=".activities.LowAttendanceListActivity" />
+
+        <receiver
+            android:name=".notifications.ReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

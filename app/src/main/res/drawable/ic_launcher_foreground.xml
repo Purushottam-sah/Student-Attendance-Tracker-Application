@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Labeled Gradient Shield with Depth -->
+    <path
+        android:pathData="M54,15L22,30v35c0,21.5 17,41 32,48c15,-7 32,-26.5 32,-48V30L54,15z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="50"
+                android:type="radial">
+                <item android:color="#5C6BC0" android:offset="0" />
+                <item android:color="#3F51B5" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Floating Graduation Cap (Layered) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,34l-18,9l18,9l18,-9L54,34z" />
+
+    <path
+        android:fillColor="#C5CAE9"
+        android:pathData="M74,47v12l-20,10l-20,-10v-12l20,10L74,47z" />
+
+    <!-- Neon Tassel Detail for Premium Contrast -->
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M74,45l11,16.5v5.5h-2v-5.5l-9,-16.5z" />
+
+</vector>

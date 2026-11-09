@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Premier Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/welcomeAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning, Admin 👋"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textCurrentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30 July 2024"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/adminProfileCard"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <ImageView
+                    android:id="@+id/adminProfileImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_profile"
+                    app:tint="@color/primary_blue" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
+        <!-- Stats Row (Total, Present, Absent, Leave) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:layout_marginBottom="24dp">
+
+            <!-- Total -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="@color/bg_blue_soft"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/textTotalStudentsCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/primary_blue" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TOTAL" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Present -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                app:cardBackgroundColor="@color/bg_green_soft"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/textPresentToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/present_green" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PRESENT" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Absent -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="3dp"
+                app:cardBackgroundColor="@color/bg_red_soft"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/textAbsentToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/absent_red" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ABSENT" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Leave -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardBackgroundColor="@color/bg_yellow_soft"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical">
+                    <TextView android:id="@+id/textLeaveToday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="@color/leave_orange" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LEAVE" android:textSize="9sp" android:textStyle="bold" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <!-- Institutional Performance Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:padding="20dp" android:background="@drawable/gradient_blue">
+                <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/adminOverallProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:progress="82"
+                        app:indicatorSize="130dp"
+                        app:trackThickness="10dp"
+                        app:indicatorColor="@color/white"
+                        app:trackColor="#40FFFFFF"
+                        app:trackCornerRadius="10dp"/>
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:gravity="center" android:orientation="vertical">
+                        <TextView android:id="@+id/adminOverallPercentText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="82%" android:textColor="@color/white" android:textSize="26sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Good" android:textColor="#E0E0E0" android:textSize="11sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.3" android:orientation="vertical" android:paddingStart="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Monthly Conduction" android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold"/>
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barChartConducted"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Action Grid (3x3 matching Screen 3) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrative Actions"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/text_primary" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:columnCount="4">
+
+            <include layout="@layout/item_admin_action" android:id="@+id/cardManageStudents" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardMarkAttendance" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardAdminReports" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardPostNotice" />
+
+            <include layout="@layout/item_admin_action" android:id="@+id/cardManageTimetable" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardAdminAnalytics" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardAdminAttendanceHistory" />
+            <include layout="@layout/item_admin_action" android:id="@+id/cardAdminMore" />
+
+        </GridLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cardAdminLogout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:text="EXIT ADMIN PORTAL"
+            android:textStyle="bold"
+            android:backgroundTint="@color/absent_red"
+            app:cornerRadius="16dp" />
+
+        <View android:layout_width="match_parent" android:layout_height="60dp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

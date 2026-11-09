@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attendance Status"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_blue" />
+
+    <TextView
+        android:id="@+id/subjectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject Name"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/textRestriction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Managed by Administrator"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/presentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Present"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/green"
+        app:cornerRadius="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/absentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Absent"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/leaveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="On Leave"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/leave_color"
+        app:cornerRadius="30dp"/>
+
+</LinearLayout>

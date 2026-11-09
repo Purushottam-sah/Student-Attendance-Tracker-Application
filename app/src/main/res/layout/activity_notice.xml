@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarNotice"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:title="Notice Board"
+        app:titleTextColor="@color/primary_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="4dp"/>
+
+    <HorizontalScrollView
+        android:id="@+id/categoryScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/toolbarNotice">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+
+            <Button
+                android:id="@+id/btnAll"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_tab_selected"
+                android:text="All"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnAcademic"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_tab_unselected"
+                android:text="Academic"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btnExam"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_tab_unselected"
+                android:text="Exam"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btnEvent"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_tab_unselected"
+                android:text="Event"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+            <Button
+                android:id="@+id/btnHoliday"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_tab_unselected"
+                android:text="Holiday"
+                android:textAllCaps="false"
+                android:textColor="@color/text_secondary" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNotice"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/categoryScroll"
+        android:paddingTop="4dp"
+        android:clipToPadding="false"/>
+
+    <TextView
+        android:id="@+id/textNoNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No announcements yet."
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarNotice" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddNotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary_blue"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

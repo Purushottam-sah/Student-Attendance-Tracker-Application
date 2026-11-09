@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/text_primary" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="My Profile"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Avatar Section -->
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_profile"
+                    android:padding="2dp"
+                    android:scaleType="centerCrop"
+                    app:strokeWidth="3dp"
+                    app:strokeColor="@color/primary_blue"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnEditAvatar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:fabCustomSize="36dp"
+                    app:tint="@color/white"
+                    android:backgroundTint="@color/primary_blue" />
+            </RelativeLayout>
+
+            <!-- Header Info -->
+            <TextView
+                android:id="@+id/textProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Student Name"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary" />
+
+            <TextView
+                android:id="@+id/textProfileSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Semester | Branch"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary" />
+
+            <!-- Info Rows -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/card_stroke">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <!-- Student ID -->
+                    <include
+                        android:id="@+id/rowStudentID"
+                        layout="@layout/item_profile_info" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" />
+
+                    <!-- Email -->
+                    <include
+                        android:id="@+id/rowEmail"
+                        layout="@layout/item_profile_info" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" />
+
+                    <!-- Phone -->
+                    <include
+                        android:id="@+id/rowPhone"
+                        layout="@layout/item_profile_info" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" />
+
+                    <!-- DOB -->
+                    <include
+                        android:id="@+id/rowDOB"
+                        layout="@layout/item_profile_info" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke" />
+
+                    <!-- Address -->
+                    <include
+                        android:id="@+id/rowAddress"
+                        layout="@layout/item_profile_info" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:text="EDIT PROFILE"
+                android:textStyle="bold"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
